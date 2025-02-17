@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SpaGCN"
+version = "1.2.7"
+description = "SpaGCN: Integrating gene expression and histology to identify spatial domains and spatially variable genes using graph convolutional networks"
+authors = [
+    { name = "Jian Hu", email = "jianhu@pennmedicine.upenn.edu" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.6"
+dependencies = [
+    "python-igraph",
+    "torch",
+    "scipy",
+    "scanpy",
+    "scikit-learn",
+    "numba",
+]
+
+[project.urls]
+Homepage = "https://github.com/jianhuupenn/SpaGCN"
+
+[tool.setuptools.packages.find]
+where = ["src"]
